@@ -1,0 +1,112 @@
+#logo {
+    height: 100px;
+    width: 100%;
+    max-width: 10000px;
+    padding-top: 30px;
+    background-image: url(background-header.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Adjust this property for responsiveness */
+    display: flex;
+}
+
+#topAction {
+    text-align: center;
+    color: #e85e4f;
+}
+
+#games-img {
+    height: 40px;
+    width: auto;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 20px;
+    background-color: #EAE7DC;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+p {
+    text-align: center;
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    padding: 8px;
+    background-color: #D8C3A5;
+    text-align: center;
+}
+
+#gimg {
+    border: 5px solid black;
+}
+
+#gr:hover {
+    color: blue;
+}
+
+#gr {
+    color: white;
+}
+
+#buy {
+    color: white;
+}
+
+#buy:hover {
+    color: blue;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.button {
+    margin-left: 10px;
+    margin-right: 10px;
+    border: solid 3px #8E8D8A;
+    border-radius: 15px;
+    padding: 10px 10px;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #E85A4F;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.button:hover {
+    background-color: #D8C3A5;
+}
+@media only screen and (max-width: 767px) {
+    .column {
+        width: 100%;
+    }
+}
+
+/* For larger screens */
+@media only screen and (min-width: 768px) {
+    .column {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .column {
+        width: 33.33%;
+    }
+}
+
