@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="forms.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-family: sans-serif;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px 0 #999;
+            /* attaches one or more shadows to an element */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo" id="logo"></div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" id="top">GamesGroove</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="action.html">Action</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="RPG.html">RPG</a>
+                    </li>
+                    <li class="nav-item active" aria-current="page">
+                        <a class="nav-link" href="sports.html">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="horror.html">Horror</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="shooter.html">Shooter</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="aboutus.html">About us</a></li>
+                            <li><a class="dropdown-item" href="contactus.html">Contact us</a></li>
+                            <li><a class="dropdown-item" href="feedback.html">feedback</a></li>
+                            <li><a class="dropdown-item" href="forms.html">form</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="sitemap.html">Sitemap</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        .ecolor{
+            color: red;
+        }
+    </style>
+    <header style="background-color: #e85e4f;">
+        <h1>form</h1>
+    </header>
+    <section>
+        <div id="datetime"></div>
+        <form action="#" name="myForm" onsubmit="return validateForm();" method="post">
+
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName">
+            <p id="firstNameError" class="error ecolor"></p>
+
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName">
+            <span id="lastNameError" class="error ecolor"></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span id="emailError" class="error ecolor"></span>
+
+
+            <label for="phone">Phone Number:</label>
+            <input type="number" id="phone" name="phone" placeholder="1234567890">
+            <span id="phoneError" class="error ecolor"></span>
+
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age">
+
+            <span id="ageError" class="error ecolor"></span>
+            <label>Choose your favorite Genre:</label>
+            <p id="genreError" class="ecolor"></p>
+            <div>
+                <label for="action">Action</label>
+                <input type="checkbox" id="action" name="genres" value="action">
+
+                <label for="rpg">RPG</label>
+                <input type="checkbox" id="rpg" name="genres" value="rpg">
+
+                <label for="horror">Horror</label>
+                <input type="checkbox" id="horror" name="genres" value="horror">
+                
+                <label for="shooter">Shooter</label>
+                <input type="checkbox" id="shooter" name="genres" value="shooter">
+                
+                <label for="sports">Sports</label>
+                <input type="checkbox" id="sports" name="genres" value="sports">
+              
+            </div>
+            <br>
+
+            <label>How satisfied are you with the site?</label>
+            <span id="radioError" class="ecolor"></span>
+            <div>
+                <label for="satisfied">Satisfied</label>
+                <input type="radio" id="satisfied" name="satisfaction" value="satisfied" >
+                <label for="happy">Happy</label>
+                <input type="radio" id="happy" name="satisfaction" value="happy">
+
+                <label for="okay">It's okay</label>
+
+                <input type="radio" id="okay" name="satisfaction" value="okay">
+                <label for="bad">needs adjusting</label>
+                <input type="radio" id="bad" name="satisfaction" value="bad">
+
+                <label for="veryUnsatisfied">Unsatisfied</label>
+                <input type="radio" id="veryUnsatisfied" name="satisfaction" value="veryUnsatisfied">
+
+            </div>
+            <label for="feedback">Additional Comments:</label>
+            <textarea id="feedback" name="feedback" rows="5"
+                placeholder="Share your thoughts about a new game u want us to add or feedback about the site"></textarea>
+            <br>
+            <label for="userYear">enter the year you first played a game in</label>
+        <input type="number" id="userYear" name="userYear" required>
+        <br>
+
+        <button type="button" onclick="subtractYear()">Calculate</button>
+        <br>
+
+        <label for="result">Result:</label>
+        <textarea id="result" rows="3" readonly></textarea>
+
+            <button type="submit" value="Submit">Submit</button>
+        </form>
+    </section>
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: true
+            };
+            const formattedDateTime = now.toLocaleString('en-US', options);
+            document.getElementById('datetime').textContent = formattedDateTime;
+        }
+
+        // Update date and time every minute
+        setInterval(updateDateTime, 1000);
+
+
+        updateDateTime();
+
+
+
+
+        function validateForm() {
+            // Reset error messages
+            document.getElementById('firstNameError').textContent = '';
+            document.getElementById('lastNameError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('phoneError').textContent = '';
+            document.getElementById('ageError').textContent = '';
+
+
+            // Get form values
+            let firstName = document.forms["myForm"]["firstName"].value;
+            let lastName = document.forms["myForm"]["lastName"].value;
+            let email = document.forms["myForm"]["email"].value;
+            let phone = document.forms["myForm"]["phone"].value;
+            let age = document.forms["myForm"]["age"].value;
+            let selectedGenres = document.querySelectorAll('input[name="genres"]:checked');
+            let selectedSatisfaction = document.querySelector('input[name="satisfaction"]:checked');
+
+
+
+            // Validate first name
+            if (firstName == '') {
+                document.getElementById('firstNameError').innerHTML = 'First name is required.';
+                return false;
+            }
+
+            // Validate last name
+            if (lastName == '') {
+                document.getElementById('lastNameError').innerHTML = 'Last name is required.';
+                return false;
+            }
+
+            // Validate email
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').textContent = 'Enter a valid email address.';
+                return false;
+            }
+
+            // Validate phone number
+            if (phone.length < 10) {
+                document.getElementById('phoneError').textContent = 'Phone number must be 10 digits.';
+                return false;
+            }
+            if (age == "") {
+                document.getElementById('ageError').textContent = 'age must be more than 0 and less than 100';
+                return false;
+            }
+            if (selectedGenres.length === 0) {
+                document.getElementById('genreError').textContent = ' please choose a genre';
+                return false;
+            }
+            if (!selectedSatisfaction) {
+                document.getElementById('radioError').textContent = ' please choose a degreee of satisfaction';            
+                    return false;
+            }
+
+            // Form is valid
+            return true;
+        }
+        function subtractYear() {
+            // Get the user input
+            var userYear = document.getElementById('userYear').value;
+
+            // Validate if the input is a valid year
+            if (isNaN(userYear) || userYear.length !== 4) {
+                alert('Please enter a valid 4-digit year.');
+                return;
+            }
+
+            // Perform the subtraction
+            var result = 2024 - parseInt(userYear);
+
+            // Display the result in the textarea
+            document.getElementById('result').innerHTML = 'You became a gamer  ' + result+' years ago';
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
